@@ -63,7 +63,7 @@ android.api = 33
 android.minapi = 24
 android.ndk = 25b
 android.build_tools_version 33.0.2
-p4a.branch = release 2023.09.16
+
 
 # (list) List of services to declare
 # This is currently only relevant to Android services.
