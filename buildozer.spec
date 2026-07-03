@@ -6,10 +6,10 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = Snake Game
 
 # (str) Package name
-package.name = myapp
+package.name = snakegame
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -57,6 +57,11 @@ requirements = python3,kivy
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse, landscape-reverse, or all
 orientation = portrait
+
+android.api = 33
+android.minapi = 24
+android.ndk = 25b
+android.build_tools_version 33.0.2
 
 # (list) List of services to declare
 # This is currently only relevant to Android services.
