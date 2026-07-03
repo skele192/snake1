@@ -17,15 +17,21 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install system deps
+    - name: Install system dependencies
       run: |
         sudo apt update
         sudo apt install -y git zip unzip openjdk-17-jdk build-essential
 
-    - name: Install Buildozer
+    - name: Install Python tools
       run: |
         pip install --upgrade pip
         pip install cython buildozer
+
+    - name: Fix Android SDK + Build Tools
+      run: |
+        mkdir -p $HOME/.buildozer/android/platform
+        yes | sdkmanager --licenses || true
+        sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.2"
 
     - name: Build APK
       run: |
